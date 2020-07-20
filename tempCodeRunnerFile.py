@@ -1,2 +1,34 @@
-arg1 = int(sys.argv[1])
-arg2 = int(sys.argv[2])
+# Given the below class:
+class Cat:
+    species = "mammal"
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+# 1 Instantiate the Cat object with 3 cats
+sam = Cat("sam", 10)
+lam = Cat("lam", 8)
+dex = Cat("dex", 7)
+
+
+# 2 Create a function that finds the oldest cat
+# def oldest_cat(*args):
+#     print("hello")
+
+    # old_age = 0
+
+    # for cat in args:
+    #     if cat.age > old_age:
+    #         old_age = cat.age
+    # return old_age
+
+
+def oldest_cat(*args):
+    return max(args)
+
+# cat_age = oldest_cat(sam.age, lam.age, dex.age)
+# 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
+print(f"The oldest cat is {oldest_cat(sam.age, lam.age, dex.age)} years old")
+
